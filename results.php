@@ -99,7 +99,9 @@ if (isset($_POST["topping2"])) {
       $dirt_water_price = 0;
       $dog_water_price = 0;
       $dirt_water_message = ".";
-    } 
+    } else {
+      $dirt_water_message = ".";
+    }
    }
     
 
@@ -120,7 +122,7 @@ if (isset($_POST["topping2"])) {
     $tax = 0;
     $total = 0;
   } else {
-    echo $order_summary . $dog_water_message . $dirt_water_message . "<br>Subtotal: $" . round($subtotal,2) . "<br>Tax: $" . round($tax,2) . "<br>Total: $" . round($total,2);
+    echo "<center>" . $order_summary . $dog_water_message . $dirt_water_message . "<br>Subtotal: $" . round($subtotal,2) . "<br>Tax: $" . round($tax,2) . "<br>Total: $" . round($total,2) . "</center>";
   }
   
 ?>

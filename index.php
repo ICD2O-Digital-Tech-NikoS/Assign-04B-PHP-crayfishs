@@ -25,7 +25,7 @@
     <!-- mdl script file -->
     <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
     <h1 id="header">Cray Cray Crayfish</h1>
-    <center><img src="./images/crayfish.jpg" alt="slug" width="600" height="300" /></center>
+    <center><img src="./images/crayfish.jpg" alt="crayfish" width="600" height="300" /></center>
     <div id="backdrop">
       <h3 id="subhead">Crayfish Options:</h3>
       <p>
@@ -80,9 +80,11 @@
         </form>
       </p>
       <!-- Create a space where the user information will be displayed -->
-      <iframe id="results" name="results">			
-
-      </iframe>
+      <div id="center-results">
+        <iframe id="results" name="results">			
+  
+        </iframe>
+      </div>
     </div>
     <br>
   </body>

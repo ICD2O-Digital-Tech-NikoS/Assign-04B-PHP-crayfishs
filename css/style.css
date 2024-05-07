@@ -72,3 +72,10 @@ select {
   height: 180%;
 }
 
+iframe {
+  background-color: #b4e4e4;
+  
+  margin-left: 35%;
+  margin-right: 45%;
+  max-width: 30%;
+}
