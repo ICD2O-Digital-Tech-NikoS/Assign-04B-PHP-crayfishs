@@ -62,16 +62,16 @@
           <!-- radio buttons for the sides -->
           <div id="drinks">
             <center><label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-1">
-              <input type="radio" id="option-1" class="mdl-radio__button" name="options1" value="1">
+              <input type="radio" id="option-1" class="mdl-radio__button" name="option" value="1">
               <span class="mdl-radio__label">Dirt Water</span>
             </label>
             <br>
             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-2">
-              <input type="radio" id="option-2" class="mdl-radio__button" name="options1" value="2">
+              <input type="radio" id="option-2" class="mdl-radio__button" name="option" value="2">
               <span class="mdl-radio__label">Dog Water</span>
             </label><br>
             <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="option-3">
-              <input type="radio" id="option-3" class="mdl-radio__button" name="options1" value="3">
+              <input type="radio" id="option-3" class="mdl-radio__button" name="option" value="3">
               <span class="mdl-radio__label">No Side</span>
             </label><br><br>
             <input type="submit" value="Submit Order" id="submit-button"/><br><br>

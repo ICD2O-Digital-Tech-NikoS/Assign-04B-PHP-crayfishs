@@ -78,25 +78,30 @@ if (isset($_POST["topping2"])) {
   $dog_water_price = 0;
   // declares variables for the message to be displayed in the order summary should the user select one of these sides
   $dirt_water_message = "";
-  $dog_water_message = "";
+  $dog_water_message = ".";
 
-  // if the user selects a this side, then it changes the price of the side to what the price of the side is on the menu, and changes the message to match the description of the side
-  if (isset($_POST["option-1"])) {
-    $dirt_water_price = 13;
-    $dirt_water_message = ", and a Dirt Water beverage from a watering hole named Ernesto, who had it in bad with a yiddish garbage man and got beat up while doing the tour de france on a unicycle made from stale baguettes.";
-  }
-  // if the user selects a this side instead, then it changes the price of the side to what the price of the side is on the menu, and changes the message to match the description of the side
-  else if (isset($_POST["option-2"])) {
-    $dog_water_price = 8;
-    $dog_water_message = ", and a Dog Water beverage.";
-  } 
-  // if the user selects this option, then it sets the prices of both sides to zero, since the option is for no side. This is only necessary if the user selects something and then decides they want to unselect it. 
-  else if (isset($_POST["option-3"])) {
-    $dirt_water_price = 0;
-    $dog_water_price = 0;
-  } else {
-    $dirt_water_message = ".";
-  }
+    // if the user selects a this side, then it changes the price of the side to what the price of the side is on the menu, and changes the message to match the description of the side
+   if (isset($_POST["option"])) {
+     // gets option values for radio buttons
+     $radioOption = $_POST["option"];
+    // if radio option is equal to 1, which is the value of the first option, then... (same for rest)
+    if ($radioOption == "1") {
+      $dirt_water_price = 13;
+      $dirt_water_message = ", and a Dirt Water beverage from a watering hole named Ernesto, who had it in bad with a yiddish garbage man and got beat up while doing the tour de france on a unicycle made from stale baguettes.";
+    }
+    // if the user selects a this side instead, then it changes the price of the side to what the price of the side is on the menu, and changes the message to match the description of the side
+    else if ($radioOption == "2") {
+      $dog_water_price = 8;
+      $dog_water_message = ", and a Dog Water beverage.";
+    } 
+    // if the user selects this option, then it sets the prices of both sides to zero, since the option is for no side. This is only necessary if the user selects something and then decides they want to unselect it. 
+    else if ($radioOption == "3") {
+      $dirt_water_price = 0;
+      $dog_water_price = 0;
+      $dirt_water_message = ".";
+    } 
+   }
+    
 
   // calculates subtotal for order
   $subtotal = $size_price + $topping_one_price + $topping_two_price + $topping_three_price + $topping_four_price + $topping_five_price + $topping_six_price + $dirt_water_price + $dog_water_price;
@@ -104,7 +109,6 @@ if (isset($_POST["topping2"])) {
   $tax = $subtotal * 0.13;
   // calculates total for order
   $total = $subtotal + $tax;
-
   // displays the order summary
   $order_summary = "Your ordered: One " . $size_message . ", with " . $topping_one_message . $topping_two_message . $topping_three_message . $topping_four_message . $topping_five_message . $topping_six_message . "totally non harmful nitrous oxide, and hydrochloric acid on top";
 
