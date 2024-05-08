@@ -116,7 +116,7 @@ if (isset($_POST["topping2"])) {
 
   // stops unnecessary things from being displayed if the user does not select a size.
   if ($size == $no_size) {
-    echo "You did not select a size.";
+    echo "<center>You did not select a size.</center>";
     $order_summary = "";
     $subtotal = 0;
     $tax = 0;
